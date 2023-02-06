@@ -109,3 +109,36 @@
 //         localStorage.setItem('textarea', document.querySelector('#ime').value);
 //     }, 400);
 // });
+
+
+class Osoba {
+    ime = 'N';
+    prezime = 'N';
+    godine = 0;
+
+    constructor(obj) {
+        if (!obj) {
+            return;
+        }
+        this.ime = obj.ime;
+        this.prezime = obj.prezime;
+        this.godine = obj.godine;
+    }
+
+    javiSe = () => {
+        return 'Zdravo ' + this.ime + ' ' + this.prezime + '!';
+    }
+
+    godiste = () => {
+        return 2023 - this.godine;
+    }
+}
+
+let osoba = new Osoba({ime: 'Marko', prezime: 'Markovic', godine: 55});
+console.log(osoba.godiste());
+localStorage.setItem('osoba', JSON.stringify(osoba));
+
+localStorage.clear();
+let izLocalStorage = new Osoba(JSON.parse(localStorage.getItem('osoba')));
+console.log(izLocalStorage.godiste());
+console.log(izLocalStorage.javiSe());

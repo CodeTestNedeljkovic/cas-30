@@ -92,20 +92,20 @@
 //     localStorage.setItem('osoba', 'druga osoba');
 // }, 1000);
 
-let vrednost = localStorage.getItem('textarea');
-document.querySelector('#ime').value = vrednost;
-let timeout;
+// let vrednost = localStorage.getItem('textarea');
+// document.querySelector('#ime').value = vrednost;
+// let timeout;
 
-window.addEventListener('storage', (event) => {
-    document.querySelector('#ime').value = event.newValue;
-});
+// window.addEventListener('storage', (event) => {
+//     document.querySelector('#ime').value = event.newValue;
+// });
 
-document.querySelector('#ime').addEventListener('keyup', function() {
-    if (timeout) {
-        clearTimeout(timeout);
-        timeout = null;
-    }
-    timeout = setTimeout(() => {
-        localStorage.setItem('textarea', document.querySelector('#ime').value);
-    }, 400);
-});
+// document.querySelector('#ime').addEventListener('keyup', function() {
+//     if (timeout) {
+//         clearTimeout(timeout);
+//         timeout = null;
+//     }
+//     timeout = setTimeout(() => {
+//         localStorage.setItem('textarea', document.querySelector('#ime').value);
+//     }, 400);
+// });

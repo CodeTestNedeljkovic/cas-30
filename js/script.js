@@ -78,16 +78,16 @@
 // }
 // console.log(localStorage)
 
-window.addEventListener('storage', (event) => {
-    console.log(event);
-});
+// window.addEventListener('storage', (event) => {
+//     console.log(event);
+// });
 
-localStorage.setItem('osoba', JSON.stringify({ime: 'Nikola', prezime: 'Nikolic', godine: 101}));
-localStorage.setItem('osoba2', {ime: 'Nikola', prezime: 'Nikolic', godine: 101});
-localStorage.getItem('osoba');
+// localStorage.setItem('osoba', JSON.stringify({ime: 'Nikola', prezime: 'Nikolic', godine: 101}));
+// localStorage.setItem('osoba2', {ime: 'Nikola', prezime: 'Nikolic', godine: 101});
+// localStorage.getItem('osoba');
 
-console.log(JSON.parse(localStorage.getItem('osoba')));
+// console.log(JSON.parse(localStorage.getItem('osoba')));
 
-setTimeout(() => {
-    localStorage.setItem('osoba', 'druga osoba');
-}, 1000);
+// setTimeout(() => {
+//     localStorage.setItem('osoba', 'druga osoba');
+// }, 1000);
